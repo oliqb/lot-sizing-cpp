@@ -1,7 +1,14 @@
 build/
 build-msvc/
-out/
-*.user
+*.obj
+*.pdb
+*.exe
+*.ilk
+model.lp
+*.xpr
 .vs/
 CMakeCache.txt
 CMakeFiles/
+compile_commands.json
+Testing/
+.vscode/
