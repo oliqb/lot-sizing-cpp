@@ -1,0 +1,10 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+      - run: cmake --build build --target unit_tests
+      - run: ctest --test-dir build --output-on-failure
