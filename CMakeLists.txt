@@ -70,7 +70,8 @@ if (MSVC)
         src/mrp/Period.cpp
         src/mrp/ProblemInstance.cpp
         src/mrp/Solver.cpp
-        src/mrp/mainXpress.cpp)
+        src/mrp/mainXpress.cpp
+        src/mrp/XpressSolver.cpp)
 
     target_include_directories(mrpXpress PRIVATE
         src/mrp

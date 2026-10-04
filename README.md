@@ -38,5 +38,5 @@ No arguments — the problem instance (items, demand, capacity) is hardcoded in 
 
 ## Status
 
-CPLEX side works end to end. Xpress port still in progress. No tests yet.
+CPLEX side works end to end. Xpress also works end to end. No tests yet.
 
