@@ -14,9 +14,9 @@ FetchContent_MakeAvailable(googletest)
 enable_testing()
 
 add_executable(unit_tests 
-    tests/test_item.cpp
-    tests/test_period.cpp
-    tests/test_probleminstance.cpp
+    tests/test_Item.cpp
+    tests/test_Period.cpp
+    tests/test_ProblemInstance.cpp
     src/mrp/Item.cpp
     src/mrp/Period.cpp
     src/mrp/ProblemInstance.cpp)
