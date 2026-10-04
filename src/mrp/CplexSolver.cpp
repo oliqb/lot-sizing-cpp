@@ -155,24 +155,3 @@ std::string CplexSolver::get_solver_status(){
     return _solver_status;
 }
 
-bool CplexSolver::validateSolution(){
-    for (int i=0; i < n_items; i++){
-        for (int t=0; t < n_periods; t++){
-            if ((_xit[i][t] > 1e-3) & (_yit[i][t] < 0.5)){
-                    std::cout << "(_xit[i][t] > 0) & (_yit[i][t] < 0.5): i=" << i << " t=" << t << " _xit[i][t]" << _xit[i][t] << " _yit[i][t]" << _yit[i][t] << std::endl;
-                    return false;
-            }
-        }
-    }
-
-    for (int t=0; t < n_periods; t++){
-        double actual = 0.0;
-        for (int i=0; i < n_items; i++){
-            actual += _problem.get_item(i).get_setup_time() * _yit[i][t] + _problem.get_item(i).get_production_unit_time() * _xit[i][t];
-        }
-    if (actual > _problem.get_period(t).get_capacity()){
-        return false;
-    }
-    }
-    return true;
-}

@@ -1,3 +1,5 @@
+#pragma once
+
 #include "ProblemInstance.h"
 #include "Item.h"
 #include "Period.h"
@@ -23,5 +25,7 @@ class Solver{
         std::vector<std::vector<double>> get_var_values(std::string var_name) const;
 
         virtual std::string get_solver_status() = 0;
+
+        bool validateSolution();
 
 };

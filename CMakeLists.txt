@@ -17,9 +17,11 @@ add_executable(unit_tests
     tests/test_Item.cpp
     tests/test_Period.cpp
     tests/test_ProblemInstance.cpp
+    tests/test_Solver.cpp
     src/mrp/Item.cpp
     src/mrp/Period.cpp
-    src/mrp/ProblemInstance.cpp)
+    src/mrp/ProblemInstance.cpp
+    src/mrp/Solver.cpp)
 target_link_libraries(unit_tests PRIVATE 
     gtest_main)
 target_include_directories(unit_tests PRIVATE 

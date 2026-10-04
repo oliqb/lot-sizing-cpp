@@ -30,8 +30,6 @@ class CplexSolver: public Solver{
         virtual std::string solve();
 
         virtual std::string get_solver_status();
-
-        bool validateSolution();
 };
 
 
